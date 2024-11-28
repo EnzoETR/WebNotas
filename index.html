@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc de Notas para Estudiantes</title>
+    <!-- Fuente desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bloc de Notas para Estudiantes</h1>
+        <button id="addNoteButton">+ Añadir Nota</button>
+    </header>
+
+    <main>
+        <section id="notesContainer">
+            <!-- Aquí aparecerán las notas -->
+            <p>No tienes notas aún. ¡Crea una nueva!</p>
+        </section>
+    </main>
+
+    <!-- Modal para crear o editar notas -->
+    <div id="noteModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Nueva Nota</h2>
+            <form id="noteForm">
+                <label for="noteTitle">Título</label>
+                <input type="text" id="noteTitle" placeholder="Escribe un título..." required>
+                
+                <label for="noteContent">Contenido</label>
+                <textarea id="noteContent" placeholder="Escribe tu nota aquí..." required></textarea>
+                
+                <label for="noteCategory">Categoría</label>
+                <input type="text" id="noteCategory" placeholder="Ej. Tarea, Enlace, Recordatorio">
+                
+                <button type="submit">Guardar</button>
+                <button type="button" id="cancelButton">Cancelar</button>
+            </form>
+        </div>
+        
+    <div class="modal-content">
+        <!-- Otros campos del formulario -->
+        <label for="noteDate">Fecha:</label>
+        <input type="date" id="noteDate" required>
+    
+        <label for="noteTime">Hora:</label>
+        <input type="time" id="noteTime" required>
+    
+        <button type="submit">Guardar</button>
+        <button type="button" id="cancelButton">Cancelar</button>
+    </div>
+    
+    </div>
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
